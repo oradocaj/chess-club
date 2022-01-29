@@ -126,18 +126,20 @@ footer a {
     text-decoration: none;
     color: Dimgrey;    
 }
-/*@media screen and (max-width: 320px) {
+
+@media screen and (max-width: 320px) {
     #hidden {        
         display: none;
     }
-}*/
+}
 
 /** Mobile **/
-@media only screen and (min-width: 425px) and (orientation: portrait) {
+
+/*@media only screen and (min-width: 425px) and (orientation: portrait) {
     #hidden {
         display: none;
     }
-}
+}*/
 
 @media only screen and (min-width: 1024px) {   
     nav ul li a:hover {
