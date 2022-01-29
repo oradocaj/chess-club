@@ -1,59 +1,131 @@
-.header {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 120px;    
-    background-color: Gainsboro;
+body, html {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-#logo {    
-    height: 50%;
-    margin-left: 20px;
-    margin-right: 20px;
+p {
+    color: Dimgrey;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: Gainsboro;
+    box-sizing: border-box;
+}
+
+#logo {
+    width: 90px;    
+    margin: 25px;
 }
 
 h1 {
-    margin-right: 20px;
+    color: Dimgrey;
 }
 
-nav {    
+nav {
+    display: flex;    
+    width: 100%;
     margin: 0;
     padding: 0;
     height: 50px;
-    margin-right: 20px;
+    background-color: Gainsboro;
+    box-sizing: border-box;    
 }
 
-ul {
-    display: flex;
-    list-style: none;    
-    align-items: center;
+nav ul {    
+    display: inline-flex;
+    width: 100%;
+    margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-ul li a {
+nav ul li {
+    display: inline-flex;
+    align-items: center;    
+    width: 100px;
+    margin-left: 20px;
+    justify-content: center;  
+}
+
+nav ul li a {    
+    color: Dimgrey;
+    font-size: 700;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    padding: 10px;
     text-decoration: none;
     list-style: none;
-    color: black;
-    margin-right: 20px;
-    padding: 0px;
 }
 
 #banner {
+    box-sizing: border-box;
     width: 100%;
-    margin-top: -50px;
+    margin-bottom: 30px
+}
+
+section {    
+    margin-right: 60px;
+    margin-top: -5px;
 }
 
 #history-image {
+    box-sizing: border-box;
     width: 50%;
+    float: left;
+    margin: 2px 20px 10px 0px;
 }
 
 #today-image {
-    width: 50%;
+    box-sizing: border-box;
+    width: 50%;    
+    float: right;
+    margin: 2px 0px 10px 20px;
 }
 
+p {
+    text-align: justify;
+}
+
+h2 {
+    color: Dimgrey;
+}
+
+.two-col {
+    width: 100%;
+    padding: 10px 30px;    
+}
+
+footer {
+    padding: 20px 10px;
+    background-color: Gainsboro;    
+    text-align: center;
+}
+footer p {
+    margin: 5px auto;    
+    text-align: center;
+    color: Dimgrey;
+}
+
+footer div {
+    margin-bottom: 15px;
+}
+
+footer div a {    
+    margin-left: 15px;
+    color: Dimgrey;
+    font-weight: bold;
+    font-size: large;
+}
+
+footer a {    
+    text-decoration: none;
+    color: Dimgrey;    
+}
 /*@media screen and (max-width: 320px) {
     #hidden {        
         display: none;
@@ -61,89 +133,96 @@ ul li a {
 }*/
 
 /** Mobile **/
-@media only screen and (min-width: 320px) and (orientation:portrait) {
-    ul > #hidden {
-        display:none;    
+@media only screen and (min-width: 425px) and (orientation: portrait) {
+    #hidden {
+        display: none;
     }
 }
 
-@media only screen and (min-width: 1025px) {
-    a:hover {
-        color: yellow;
+@media only screen and (min-width: 1024px) {   
+    nav ul li a:hover {
+        background-color: Dimgrey;
+        color: Gainsboro;
     }
+
+    section {
+        display: flex;        
+        margin-left: 60px;        
+    }
+
+    h2 {
+        justify-content: center;
+        text-align: center; 
+
+    }
+
+    p {
+        text-align: justify; 
+    }    
+
+    #history-image, #today-image {
+        width: 100%;
+    }
+  
 }
 
-/* Wobble Horizontal */
-@keyframes hvr-wobble-horizontal {
-    16.65% {
-      -webkit-transform: translateX(8px);
-      transform: translateX(8px);
-    }
-    33.3% {
-      -webkit-transform: translateX(-6px);
-      transform: translateX(-6px);
-    }
-    49.95% {
-      -webkit-transform: translateX(4px);
-      transform: translateX(4px);
-    }
-    66.6% {
-      -webkit-transform: translateX(-2px);
-      transform: translateX(-2px);
-    }
-    83.25% {
-      -webkit-transform: translateX(1px);
-      transform: translateX(1px);
-    }
-    100% {
-      -webkit-transform: translateX(0);
-      transform: translateX(0);
-    }
+/*Animation-left*/
+.wrapper-left {
+    position: absolute;
+    overflow: hidden;
+    margin-top: 20%;
+    margin-left: 8%;
+    width: 50%;
+    height: 20%;
 }
 
-@keyframes hvr-wobble-horizontal {
-    16.65% {
-      -webkit-transform: translateX(8px);
-      transform: translateX(8px);
-    }
-    33.3% {
-      -webkit-transform: translateX(-6px);
-      transform: translateX(-6px);
-    }
-    49.95% {
-      -webkit-transform: translateX(4px);
-      transform: translateX(4px);
-    }
-    66.6% {
-      -webkit-transform: translateX(-2px);
-      transform: translateX(-2px);
-    }
-    83.25% {
-      -webkit-transform: translateX(1px);
-      transform: translateX(1px);
-    }
-    100% {
-      -webkit-transform: translateX(0);
-      transform: translateX(0);
-    }
-  }
-  .hvr-wobble-horizontal {
-    display: inline-block;
-    vertical-align: middle;
-    -webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  }
-  .hvr-wobble-horizontal:hover, .hvr-wobble-horizontal:focus, .hvr-wobble-horizontal:active {
-    -webkit-animation-name: hvr-wobble-horizontal;
-    animation-name: hvr-wobble-horizontal;
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-timing-function: ease-in-out;
-    animation-timing-function: ease-in-out;
-    -webkit-animation-iteration-count: 1;
-    animation-iteration-count: 1;
+#slide-black {
+    position: relative;
+    left: -1000px;    
+    height: 80%;
+    margin-left: 80%;
+    background: none;       
+    -webkit-animation: slide 2.5s forwards;
+    -webkit-animation-delay: 2.5s;
+    animation: slide 1.8s forwards;
+    animation-delay: 1.5s;
 }
+
+/*Animation-right*/
+.wrapper-right {
+    position: absolute;
+    overflow: hidden;
+    margin-top: 20%;
+    margin-left: 48%;    
+    width: 50%;    
+    height: 20%;
+}
+
+#slide-white {
+    position: relative;
+    right: -1550px;
+    margin-top: 0;    
+    height: 80%;
+    margin-left: 0;        
+    background: none;         
+    -webkit-animation: slidew 2s forwards;
+    -webkit-animation-delay: 2s;
+    animation: slidew 2s forwards;
+    animation-delay: 1s;    
+}
+
+@-webkit-keyframes slide {    
+    100% { left: 0; }
+    99% { visibility: visible; }
+    100% { visibility: hidden; } 
+}
+@-webkit-keyframes slidew {
+    100% { right: 0; }
+    99% { visibility: visible; }
+    100% { visibility: hidden; }    
+}
+
+
 
 /*https://css-tricks.com/css-animation-libraries/
 
