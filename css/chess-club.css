@@ -4,38 +4,32 @@ body, html {
     padding: 0;
 }
 
-p {
+h1, h2, p {
     color: Dimgrey;
 }
 
 header {
-    width: 100%;
     display: flex;
+    width: 100%;
     align-items: center;
     background-color: Gainsboro;
     box-sizing: border-box;
 }
 
 #logo {
-    width: 90px;    
+    width: 90px;
     margin: 25px;
 }
 
-h1 {
-    color: Dimgrey;
-}
-
 nav {
-    display: flex;    
-    width: 100%;
-    margin: 0;
-    padding: 0;
+    display: flex;
+    width: 100%;    
     height: 50px;
     background-color: Gainsboro;
-    box-sizing: border-box;    
+    box-sizing: border-box;
 }
 
-nav ul {    
+nav ul {
     display: inline-flex;
     width: 100%;
     margin: 0;
@@ -45,68 +39,56 @@ nav ul {
 
 nav ul li {
     display: inline-flex;
-    align-items: center;    
     width: 100px;
     margin-left: 20px;
-    justify-content: center;  
+    align-items: center;
+    justify-content: center;
 }
 
-nav ul li a {    
-    color: Dimgrey;
-    font-size: 700;
-    font-weight: 600;
-    text-transform: uppercase;
+nav ul li a {
     margin-bottom: 25px;
     padding: 10px;
+    font-size: 700;
+    font-weight: 600;
+    color: Dimgrey;
+    text-transform: uppercase;
     text-decoration: none;
     list-style: none;
 }
 
-#banner {
-    box-sizing: border-box;
-    width: 100%;
-    margin-bottom: 30px
-}
-
-section {    
-    margin-right: 60px;
-    margin-top: -5px;
-}
-
 #history-image {
-    box-sizing: border-box;
-    width: 50%;
     float: left;
+    width: 50%;
     margin: 2px 20px 10px 0px;
+    box-sizing: border-box;
 }
 
 #today-image {
-    box-sizing: border-box;
-    width: 50%;    
     float: right;
+    width: 50%;
     margin: 2px 0px 10px 20px;
+    box-sizing: border-box;
 }
 
 p {
     text-align: justify;
 }
 
-h2 {
-    color: Dimgrey;
-}
-
-.two-col {
-    width: 100%;
-    padding: 10px 30px;    
+.info {
+    width: 85%;
+    margin: 0 auto;
+    padding: 10px 30px;
 }
 
 footer {
     padding: 20px 10px;
-    background-color: Gainsboro;    
+    background-color: Gainsboro;
     text-align: center;
+    margin-top: 20px;
 }
+
 footer p {
-    margin: 5px auto;    
+    margin: 12px auto;
     text-align: center;
     color: Dimgrey;
 }
@@ -115,111 +97,107 @@ footer div {
     margin-bottom: 15px;
 }
 
-footer div a {    
+footer div a {
     margin-left: 15px;
     color: Dimgrey;
     font-weight: bold;
     font-size: large;
 }
 
-footer a {    
+footer a {
     text-decoration: none;
-    color: Dimgrey;    
+    color: Dimgrey;
 }
 
-/** Mobile **/
+footer span a {
+    background-color: Dimgrey;
+    color: Gainsboro;
+    padding: 2px 5px 2px 5px;
+    border-radius: 0px;
+}
 
+/*Animation*/
+@keyframes display {
+    0% {      
+        opacity: 0;
+    }
+    10% {      
+        opacity: 1;
+    }
+    20% {      
+        opacity: 1;
+    }
+    30% {      
+        opacity: 0;
+    }
+    100% {      
+        opacity: 0;
+    }
+}
+  
+.carousel {
+    background-image: url("/img/texture.jpg");    
+    position: relative;
+    width: 100%;
+    height: 300px;
+    margin-bottom: 30px;
+}
+
+.carousel > img {
+    position: absolute;
+    top: 25px;
+    left: calc(50% - 224px);
+    border: 1px solid Gainsboro;
+    opacity: 0;
+    animation: display 25s infinite;
+}
+
+img:nth-child(1) {
+    animation-delay: 5s;
+}
+img:nth-child(2) {
+    animation-delay: 10s;
+}
+img:nth-child(3) {
+    animation-delay: 15s;
+}
+img:nth-child(4) {
+    animation-delay: 20s;
+}
+img:nth-child(5) {
+    animation-delay: 25s;
+}
+
+/* Mobile */
 @media only screen and (min-width: 320px) and (orientation: portrait) {
     #hidden {
         display: none;
     }
 }
 
-@media only screen and (min-width: 1024px) {   
+/* Desktop */
+@media only screen and (min-width: 1024px) {
     nav ul li a:hover {
         background-color: Dimgrey;
         color: Gainsboro;
     }
 
     section {
-        display: flex;        
-        margin-left: 60px;        
+        display: flex;
+        width: 100%;    
     }
 
     h2 {
         justify-content: center;
-        text-align: center; 
-
+        text-align: center;
     }
 
     p {
-        text-align: justify; 
-    }    
+        text-align: justify;
+    }
 
     #history-image, #today-image {
         width: 100%;
-    }
-  
+        margin-bottom: 20px;
+    }  
 }
-
-/*Animation-left*/
-.wrapper-left {
-    position: absolute;
-    overflow: hidden;
-    margin-top: 20%;       
-    width: 60%;
-    height: 20%;
-}
-
-#slide-black {
-    position: relative;
-    left: -800px;    
-    height: 80%;
-    margin-left: 76.7%;
-    background: none;    
-    -webkit-animation: slide 2.5s forwards;
-    -webkit-animation-delay: 2.5s;
-    animation: slide 1.8s forwards;
-    animation-delay: 1.5s;
-}
-
-/*Animation-right*/
-.wrapper-right {
-    position: absolute;
-    overflow: hidden;
-    margin-top: 20%;
-    margin-left: 45%;
-    padding-left: 1%;    
-    width: 60%;    
-    height: 20%;
-}
-
-#slide-white {
-    position: relative;
-    right: -800px;
-    margin-top: 0;    
-    height: 80%;
-    margin-left: 0;        
-    background: none;         
-    -webkit-animation: slidew 2s forwards;
-    -webkit-animation-delay: 2s;
-    animation: slidew 2s forwards;
-    animation-delay: 1s;    
-}
-
-@-webkit-keyframes slide {    
-    100% { left: 0; }
-    99% { visibility: visible; }
-    100% { visibility: hidden; } 
-}
-@-webkit-keyframes slidew {
-    100% { right: 0; }
-    99% { visibility: visible; }
-    100% { visibility: hidden; }    
-}
-
-
-
-/*https://css-tricks.com/css-animation-libraries/
-
-https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/hover.css*/
