@@ -67,7 +67,6 @@ nav ul li a {
     float: right;
     width: 50%;
     margin: 2px 0px 10px 20px;
-    box-sizing: border-box;
 }
 
 p {
@@ -75,9 +74,10 @@ p {
 }
 
 .info {
-    width: 75%;
+    width: 80%;
     margin: 0 auto;
     padding: 10px 30px;
+    border: 1px solid black;
 }
 
 footer {
