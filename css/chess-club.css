@@ -144,29 +144,18 @@ footer span a {
 
 .carousel > img {
     position: absolute;
-    top: 25px;
-    left: calc(50% - 224px);
+    top: 50px;
+    left: calc(50% - 174px);
     border: 1px solid Gainsboro;
     opacity: 0;
-    animation: display 25s infinite;
+    animation: display 5s infinite;
     box-sizing: border-box;
 }
 
 img:nth-child(1) {
-    animation-delay: 5s;
+    animation-delay: 1s;
 }
-img:nth-child(2) {
-    animation-delay: 10s;
-}
-img:nth-child(3) {
-    animation-delay: 15s;
-}
-img:nth-child(4) {
-    animation-delay: 20s;
-}
-img:nth-child(5) {
-    animation-delay: 25s;
-}
+
 
 /* Mobile */
 @media only screen and (min-width: 320px) and (orientation: portrait) {
