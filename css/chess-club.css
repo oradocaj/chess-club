@@ -175,7 +175,7 @@ img:nth-child(5) {
     }
 
     #history-image, #today-image {
-        margin-bottom: 0px;
+        margin-bottom: 5px;
     }
 }
 
