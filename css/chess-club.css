@@ -148,26 +148,25 @@ footer span a {
     left: calc(50% - 160px);
     border: 1px solid Gainsboro;
     opacity: 0;
-    animation: display 22s infinite;
+    animation: display 21s infinite;
     box-sizing: border-box;
 }
 
 img:nth-child(1) {
-    animation-delay: 2s;
+    animation-delay: 1s;
 }
 img:nth-child(2) {
-    animation-delay: 7s;
+    animation-delay: 6s;
 }
 img:nth-child(3) {
-    animation-delay: 12s;
+    animation-delay: 11;
 }
 img:nth-child(4) {
-    animation-delay: 17s;
+    animation-delay: 16s;
 }
 img:nth-child(5) {
-    animation-delay: 22s;
+    animation-delay: 21s;
 }
-
 
 /* Mobile */
 @media only screen and (min-width: 320px) and (orientation: portrait) {
