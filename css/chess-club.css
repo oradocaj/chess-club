@@ -75,7 +75,7 @@ p {
 }
 
 .info {
-    width: 85%;
+    width: 75%;
     margin: 0 auto;
     padding: 10px 30px;
 }
@@ -147,13 +147,25 @@ footer span a {
     top: 59px;
     left: calc(50% - 160px);
     border: 1px solid Gainsboro;
-    opacity:1;
-    animation display 5s infinite;
+    opacity: 0;
+    animation display 25s infinite;
     box-sizing: border-box;
 }
 
 img:nth-child(1) {
-    animation-delay: 1s;
+    animation-delay: 5s;
+}
+img:nth-child(2) {
+    animation-delay: 10s;
+}
+img:nth-child(3) {
+    animation-delay: 15s;
+}
+img:nth-child(4) {
+    animation-delay: 20s;
+}
+img:nth-child(5) {
+    animation-delay: 25s;
 }
 
 
