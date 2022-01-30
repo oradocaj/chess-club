@@ -138,13 +138,13 @@ footer span a {
     background-image: url('../img/texture.jpg');    
     position: relative;
     width: 100%;
-    height: 300px;
+    height: 220px;
     margin-bottom: 30px;
 }
 
 .carousel > img {
     position: absolute;
-    top: 59px;
+    top: 19px;
     left: calc(50% - 160px);
     border: 1px solid Gainsboro;
     opacity: 0;
@@ -173,6 +173,9 @@ img:nth-child(5) {
 @media only screen and (min-width: 320px) and (orientation: portrait) {
     #hidden {
         display: none;
+    }
+    #history-image, #today-image {
+        margin-bottom: 10px;
     }
 }
 
