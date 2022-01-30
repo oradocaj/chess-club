@@ -144,11 +144,11 @@ footer span a {
 
 .carousel > img {
     position: absolute;
-    top: 50px;
-    left: calc(50% - 174px);
+    top: 59px;
+    left: calc(50% - 160px);
     border: 1px solid Gainsboro;
-    opacity: 0;
-    animation: display 5s infinite;
+    opacity:1;
+    animation display 5s infinite;
     box-sizing: border-box;
 }
 
