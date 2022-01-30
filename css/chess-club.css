@@ -148,7 +148,7 @@ footer span a {
     left: calc(50% - 160px);
     border: 1px solid Gainsboro;
     opacity: 0;
-    animation display 25s infinite;
+    animation: display 25s infinite;
     box-sizing: border-box;
 }
 
